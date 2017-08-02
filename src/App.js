@@ -3,8 +3,6 @@ import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 
-const clueAPI = 'http://jservice.io/api/clues?value=1000&offset=';
-
 class App extends Component {
   constructor(){
     super();

@@ -1,0 +1,43 @@
+[
+ [
+    { "question": "What does a doctype do?",
+      "answer": "Doctype lets the browser know how to evaluate the text on the page. Various versions of html have been released over time and the declaration gives the browser an idea of what version it is written. HTML5 for example is <!DOCTYPE html>"
+    },
+    { "question": "What's the difference between full standards mode, almost standards mode and quirks mode?",
+      "answer": "In quirks mode, layout emulates nonstandard behavior in Navigator 4 and Internet Explorer 5. This is essential in order to support websites that were built before the widespread adoption of web standards. \n In full standards mode, the behavior is (hopefully) the behavior described by the HTML and CSS specifications. \n In almost standards mode, there are only a very small number of quirks implemented."
+    },
+    { "question": "What's the difference between HTML and XHTML?",
+      "answer": "XML!: XML syntax rules are far more rigorous than HTML. As a result, XHTML makes authors work more precisely, having to address issues such as: all elements and attribute names must appear in lower case all attribute values must be quoted non-Empty Elements require a closing tag empty elements are terminated using a space and a trailing slash no attribute minimization is allowed in strict XHTML all inline elements must be contained in a block element \n HTML!: Start tags are not required for every element End tags are not required for every element Only void elements such as br, img, and link may be “self-closed” with /> Tags and attributes are case-insensitivem Attributes do not need to be quoted Some attributes may be empty (such as checked and disabled) Special characters, or entities, do not have to be escaped The document must include an HTML5 DOCTYPE"
+    },
+    { "question": "Are there any problems with serving pages as application/xhtml+xml",
+      "answer": "When a browser reads XML it uses an XML parser, not an HTML parser. Unfortunately, up to and including version 8, Internet Explorer doesn't support files served as XML, although a number of other browsers do. To get around the fact that not all browsers support content served as XML, many XHTML files are actually served using the text/html MIME type. In this case, the user agent will read the file as if it were HTML, and use the HTML parser. \n Since the browser considers the XML to actually be HTML, you need to take into account some of the differences between the two formats when writing your XHTML code, to ensure that the differences between XML and HTML syntax do not trip up the browser. This includes different ways of declaring the character encoding or language declarations inside the document."
+    },
+    { "question": "How do you serve a page with content in multiple languages?",
+      "answer": "Specifying the language of the page via the '<html lang='en'> (or whichever language you are using) at the top of the page. You can also declare language for specific content by using the lang attribute on the desired element tag. \n *** Good practice to use the language declaration that allows the browser to offer translation options based on the users region. At least in Chrome."
+    },
+    { "question": "What kind of things must you be wary of when design or developing for multilingual sites?",
+      "answer": "If u are translating with some translation service, the words may not be the literal translation and context is huge. Also, the word may not have an actual translation at all or mean something different in the other language."
+    },
+    { "question": "What are `data-` attributes good for?",
+      "answer": "Data attributes are actually pretty underused, but they are great for delivering a piece of information about the tag that can be gathered when inspecting that element or reacting to an event initated by it."
+    },
+    { "question": "Consider HTML5 as an open web platform. What are the building blocks of HTML5?",
+      "answer": "HTML5 elements include several new tags with a more semantic naming pattern. Here is a list of the more prominent:\n - <article>, \n- <section>, \n - <header>, \n - <footer>, \n- <figure>, \n- <figcaption>, \n - <video>, \n - <aside>, \n - <audio>, \n - <canvas>, - ... more"
+    },
+    { "question": "Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.",
+      "answer": " - A cookie is a browser specific piece of information that can be seen by all sites you visit - sessionStorage is a piece of information put in the clients browser session by the site which is relevant to their current session on the site. It usually expires when the user navigates away from the page, but there are techniques used to persist it - localStorage is stored in the browser and will persist even when tabs are closed or page navigated away from. It is not sent with every request"
+    },
+    { "question": "Describe the difference between `<script>`, `<script async>` and `<script defer>`",
+      "answer": "\n - <script>: loads immediately in the order it was listed on the document, blocks rendering., \n - <script async>: starts loading but lets the browser continue to the next line of execution. Will indicate when it has finished loading and then run. This is usually intended for CDN files, or other such files, which do not change the page structure., \n - <script defer>: waits until all other scripts have been loaded before loading. "
+    },
+    { "question": "Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?",
+      "answer": "CSS formats the look of the site which is the first thing users want to see when their page loads. Scripts on the other hand may not need to excute until they are needed for event handling or dynamic content. \n Exceptions: If you use the async or defer declarations you can avoid blocking. Another exception might be if you need to run a script in order to render the page."
+    }, 
+    { "question": "What is progressive rendering?",
+      "answer": "Progressive rendering means loading chunks of the html as needed. It can speed up the rendering process."
+    }, 
+    { "question": "Have you used different HTML templating languages before?",
+      "answer": "Popular templating languages include: Dust, Mustache, HandleBars, Underscore, EJS and Pug... more"
+    }
+  ]
+]

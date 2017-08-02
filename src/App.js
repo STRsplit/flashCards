@@ -54,7 +54,6 @@ class App extends Component {
     let questionCard = (<div></div>)
     if(!this.state.isLoading){
     const { questionPool, curr } = this.state
-    console.log(questionPool[curr])
     const { id, question, answer } = questionPool[curr];
     questionCard = (
       <div>

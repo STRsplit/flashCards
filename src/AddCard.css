@@ -1,0 +1,116 @@
+.AddCard-Container {
+  flex: .1 0 auto;
+  background-color: #eee;
+}
+.AddCard {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+.AddCard-Inner-Container {
+  display: flex;
+  flex: 1 0 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.AddCard-Inner-Container form {
+  display: flex;
+  flex: .5 0 auto;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.AddCard-Inner-Container ul {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+}
+.AddCard-Link {
+  flex: 1 0 50%;
+  align-items: center;
+  justify-content: center;
+}
+form ul > li {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-between;
+  margin: 5px 0;
+  flex-wrap: wrap;
+}
+form label {
+  display: flex;
+  flex: .3 0 100px;
+  white-space: nowrap;
+  padding: 5px;
+}
+form button {
+  display: flex;
+  flex-direction: row;
+  flex: .25 0 auto;
+  align-self: flex-end;
+  justify-content: center;
+  padding: 5px;
+  
+}
+form select {
+  display: flex;
+  padding: 10px;
+  flex: .5 0 auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+textarea {
+  padding: 2%;
+  box-sizing: border-box;
+  flex: 1 0 240px;
+}
+.slide {
+  animation: slide 2.4s ease-out;
+  transition: all 1s ease-out;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+.flip {
+  animation: flip 2.5s ease-out;
+  transition: all 1s ease-out;
+}
+.flip ul li {
+  visibility: hidden;
+  transition: all .8s;
+}
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg)
+  }
+  100% {
+    transform: rotateX(180deg)
+  }
+}
+
+@media screen and (max-width: 900px) {
+  @keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
+}
